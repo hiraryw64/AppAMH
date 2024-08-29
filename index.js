@@ -1,3 +1,7 @@
+//** IMPORTAMOS */
+const {paginaMenu} = require("./middleware/funciones_views.js");
+
+
 /** --- CREAMOS LAS CONSTANTES QUE NOS DESCARGARAN, INDICAN LA RUTA Y EJECUTAN "express" --- */
 
 const express = require("express"); // OBLIGATORIO
@@ -16,7 +20,9 @@ const carpetaStatic = path.join(__dirname, "public"); // OBLIGATORIO
 app.use(express.static(carpetaStatic)); // OBLIGATORIO
 /*-------------------------------------------------------------------*/
 
-
+/*-----------------MOVERSE ENTRE DIFERENTES PAGINAS-----------------*/
+//Pagina Menu
+app.get("/pagMenu", paginaMenu);
 
 /* --- START SERVER --- */
 app.listen(5000, function () {
