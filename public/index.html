@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module" async src="./javaScript/index.js"></script>
 </head>
+
 <body>
     <a href="#">
         <img class="logo" src="./imagenes/logoMH.jpg" />
     </a>
-    <a href="/pagMenu">ENTRAR</a>
+
+    <div class="main-content">
+        <div class="form-usuario">
+            <h2>Acceso a tu ususario</h2>
+            <!--FORMULARIO LOGIN -->
+            <form id="formLogin">
+                <ul>
+                    <li>
+                        <label for="email">Email de usuario</label>
+                        <!-- for: vincula la etiqueta directamente al campo de entrada.-->
+                        <input type="email" name="user_usuario" placeholder="Introduzca su email" />
+                    </li>
+                    <li>
+                        <label for="pwd">Contraseña</label>
+                        <!-- for: vincula la etiqueta directamente al campo de entrada.-->
+                        <input type="password" name="user_pwd" placeholder="Introduzca su contraseña" </li>
+                    <li>
+                        <a class="olvidoPwd" href="#">¿A olvidado su contraseña?</a>
+                    </li>
+                    <div class="btnes">
+                        <input class="btnLog-User" type="submit" value="Enviar" />
+                        <input class="btnLog-User" id="cerrarLogin" type="submit" value="Cancelar" />
+                        <input class="btnLog-User" type="reset"
+                            value="Borrar" /><!-- type="reset" - borra todos los valores de los inputs -->
+                    </div>
+                    <li class="enlaceRegistro">
+                        <label><strong>Si no estás resgistrado</strong><a href="/crearUsuario">Pincha aquí</a></label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <a href="/pagMenu">ENTRAR</a>
+
+        <div>
+            <a href="#">CREAR NUEVO USUARIO</a>
+        </div>
+
+
+    </div>
 </body>
+
 </html>
