@@ -1,5 +1,5 @@
 //** IMPORTAMOS */
-const {paginaMenu} = require("./middleware/funciones_views.js");
+const {paginaMenu, paginaNuevoParticipante, paginaUnidadFamiliar} = require("./middleware/funciones_views.js");
 
 
 /** --- CREAMOS LAS CONSTANTES QUE NOS DESCARGARAN, INDICAN LA RUTA Y EJECUTAN "express" --- */
@@ -18,11 +18,17 @@ app.use(express.json()); // OBLIGATORIO
 
 const carpetaStatic = path.join(__dirname, "public"); // OBLIGATORIO
 app.use(express.static(carpetaStatic)); // OBLIGATORIO
-/*-------------------------------------------------------------------*/
+
 
 /*-----------------MOVERSE ENTRE DIFERENTES PAGINAS-----------------*/
-//Pagina Menu
+//Página Menu
 app.get("/pagMenu", paginaMenu);
+
+//Página Nuevo Participante
+app.get("/pagNuevoParticipante", paginaNuevoParticipante);
+
+//Página Unidad Familiar
+app.get("/pagUnidadFamiliar", paginaUnidadFamiliar);
 
 /* --- START SERVER --- */
 app.listen(5000, function () {
