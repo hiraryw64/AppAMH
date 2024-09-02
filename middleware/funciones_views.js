@@ -27,6 +27,15 @@ const paginaNuevoParticipante = (req, res) => {
   res.sendFile("./views/nuevoParticipante.html", optionsRuta); // le enviamos la ruta
 }; 
 
+/** PAGINA DE NUEVA UNIDAD FAMILIAR */
+const paginaNuevaUnidadFamiliar = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/nuevaUnidadFamiliar.html", optionsRuta); // le enviamos la ruta
+}; 
+
 /** PAGINA DE UNIDAD FAMILIAR */
 const paginaUnidadFamiliar = (req, res) => {
   //Enviamos la dirección de un html
@@ -36,8 +45,19 @@ const paginaUnidadFamiliar = (req, res) => {
   res.sendFile("./views/unidadFamiliar.html", optionsRuta); // le enviamos la ruta
 }; 
 
+/** PAGINA DE SALUD */
+const paginaSalud = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/salud.html", optionsRuta); // le enviamos la ruta
+}; 
+
   module.exports = {
     paginaMenu,
     paginaNuevoParticipante,
-    paginaUnidadFamiliar
+    paginaNuevaUnidadFamiliar,
+    paginaUnidadFamiliar,
+    paginaSalud
   };

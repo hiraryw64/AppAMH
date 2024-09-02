@@ -26,7 +26,7 @@ idUdFamiliar integer PRIMARY KEY AUTOINCREMENT,
 cantMenores integer not null,
 cantEscolarizados integer not null,
 miembros integer not null,
-situación varchar(50)
+situacion varchar(50)
 );
 
 drop table if exists participantes;

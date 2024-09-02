@@ -1,5 +1,5 @@
 //** IMPORTAMOS */
-const {paginaMenu, paginaNuevoParticipante, paginaUnidadFamiliar} = require("./middleware/funciones_views.js");
+const {paginaMenu, paginaNuevoParticipante, paginaNuevaUnidadFamiliar, paginaUnidadFamiliar, paginaSalud} = require("./middleware/funciones_views.js");
 
 
 /** --- CREAMOS LAS CONSTANTES QUE NOS DESCARGARAN, INDICAN LA RUTA Y EJECUTAN "express" --- */
@@ -27,8 +27,17 @@ app.get("/pagMenu", paginaMenu);
 //Página Nuevo Participante
 app.get("/pagNuevoParticipante", paginaNuevoParticipante);
 
-//Página Unidad Familiar
-app.get("/pagUnidadFamiliar", paginaUnidadFamiliar);
+//Página Nueva Unidad Familiar
+app.get("/pagNuevaUnidadFamiliar", paginaNuevaUnidadFamiliar);
+
+//Página Existe Unidad Familiar
+app.get("/pagUnidadFamiliar", paginaUnidadFamiliar){
+  // revisar condiciones, si if == no --> entrar en paginaNuevaunidadFamiliar, si if == si --> recoger datos de la ud familiar existente y abrir pagSalud
+}
+
+//Página Salud
+app.get("/pagSalud", paginaSalud);
+
 
 /* --- START SERVER --- */
 app.listen(5000, function () {

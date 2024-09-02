@@ -21,19 +21,25 @@
 
             <form id="form_udFamiliar" action="" method="post">
                                 
-                <h3><strong>¿Pertenece a alguna unidad familiar existente?</strong></h3>
-
-                <input type="radio" name="existeUD" value="0">Si</input>
-                <input type="radio" name="existeUD" value="1" >No</input>
+                <h3><strong>Unidad Familiar</strong></h3>
                 
-                <label for="puestoFamiliar">Puesto que ocupa en la unidad familiar</label>
-                <input type="text" id="puestoFamiliar" name="puestoFamiliar" placeholder="..." required />
+                <label for="miembros">Miembros (contando la persona)</label>
+                <input type="number" id="miembros" name="miembros" placeholder="..." required />
                 
-                
+                <label for="cantMenores">Número de menores</label>
+                <input type="number" id="cantMenores" name="cantMenores" placeholder="..." required />
+                <label for="cantMenores">Número de menores</label>
+                <input type="number" id="cantMenores" name="cantMenores" placeholder="..." required />
+                <label for="edad">Edad de los menores</label>
+                <input type="number" id="edad" name="edad" placeholder="..." required />
+                <label for="cantEscolarizados">Númer de menores escolarizados</label>
+                <input type="number" id="cantEscolarizados" name="cantEscolarizados" placeholder="..." required />
+                <label for="situacion">Especificar relación</label>
+                <input type="text" id="situacion" name="situacion" placeholder="..." required />
 
 
                 <div class="botones-form">
-                    <a href="/pagNuevaUnidadFamiliar">Siguiente</a>
+                    <a href="/pagSalud">Siguiente</a>
                     <input type="reset" value="Borrar" />
                 </div>
             </form>
