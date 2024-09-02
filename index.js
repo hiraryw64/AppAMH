@@ -31,9 +31,9 @@ app.get("/pagNuevoParticipante", paginaNuevoParticipante);
 app.get("/pagNuevaUnidadFamiliar", paginaNuevaUnidadFamiliar);
 
 //Página Existe Unidad Familiar
-app.get("/pagUnidadFamiliar", paginaUnidadFamiliar){
+app.get("/pagUnidadFamiliar", paginaUnidadFamiliar)
   // revisar condiciones, si if == no --> entrar en paginaNuevaunidadFamiliar, si if == si --> recoger datos de la ud familiar existente y abrir pagSalud
-}
+
 
 //Página Salud
 app.get("/pagSalud", paginaSalud);
