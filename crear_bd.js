@@ -13,14 +13,7 @@ function crearBase() {
   );
   db.exec(
       `
-      drop table if exists paises;
-create table paises(
-idPais integer PRIMARY KEY AUTOINCREMENT,
-nombrePais varchar(50) unique not null
-);
-
-
-drop table if exists udFamiliar;
+      drop table if exists udFamiliar;
 create table udFamiliar(
 idUdFamiliar integer PRIMARY KEY AUTOINCREMENT,
 cantMenores integer not null,
@@ -41,8 +34,8 @@ fechaNac date not null,
 fechaEspana date not null,
 fechaAcogida date not null,
 estadoCivil varchar(25) not null,
-idPaisNacimiento int not null,
-idPaisNacionalidad int not null,
+paisNacimiento varchar(50) not null,
+paisNacionalidad varchar(50) not null,
 direccion varchar(200),
 ciudad varchar(50) not null,
 telefono varchar(15) not null,
@@ -53,9 +46,7 @@ puestoFamiliar varchar(25),
 idTablaSalud integer not null,
 idTablaFormacion integer not null,
 idTablaLaboral integer not null,
-foreign key (idUdFamiliar) references udFamiliar(idUdFamiliar),
-foreign key (idPaisNacimiento) references paises(idPais),
-foreign key (idPaisNacionalidad) references paises(idPais)
+foreign key (idUdFamiliar) references udFamiliar(idUdFamiliar)
 );
 
 

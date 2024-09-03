@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Participante</title>
-    <script type="module" async src="./javaScript/index.js"></script>
+    <script type="module" async src="./javaScript/addParticipantes/index.js"></script>
     <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,81 +20,79 @@
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_nuevoPart" action="" method="post">
-                
+
                 <label for="fAcogida">Fecha de acogida</label>
-                <input type="date" id="f_Acogida" name="fechaAcogida"
-                    placeholder="Introduce la fecha de acogida..." required />
+                <input type="date" id="f_Acogida" name="fechaAcogida" placeholder="Introduce la fecha de acogida..."
+                    required />
 
                 <h3><strong>Datos personales</strong></h3>
 
                 <label for="proteccionDatos">Documento de proteccion de datos</label>
-                <input type="radio" name="proteccionDatos" value="0">Si</input>
-                <input type="radio" name="proteccionDatos" value="1" >No</input>
+                <input type="radio" name="proteccionDatos" value="0">Sí</input>
+                <input type="radio" name="proteccionDatos" value="1">No</input>
 
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="..." required />
-                <label for="apellido1">Primer apellido</label>
-                <input type="text" id="apellido1" name="apellido1" placeholder="..." required />
-                <label for="apellido2">Segundo apellido</label>
-                <input type="text" id="apellido2" name="apellido2" placeholder="..." required />
-                <label for="dni">Documento de identidad (especifica si es DNI, NIE, Pasaporte o TIE)</label>
-                <input type="text" id="dni" name="dni" placeholder="..." required />
-                <label for="genero">Identidad de género</label>
-                <select id="genero" name="genero" required>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                    <option value="noContesto">No contesto</option>
-                    <option value="otro">otro</option>                    
-                </select>
+                <div id="contFormulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="..." required />
+                    <label for="apellido1">Primer apellido</label>
+                    <input type="text" id="apellido1" name="apellido1" placeholder="..." required />
+                    <label for="apellido2">Segundo apellido</label>
+                    <input type="text" id="apellido2" name="apellido2" placeholder="..." required />
+                    <label for="dni">Documento de identidad (especifica si es DNI, NIE, Pasaporte o TIE)</label>
+                    <input type="text" id="dni" name="dni" placeholder="..." required />
+                    <label for="genero">Identidad de género</label>
+                    <select id="genero" name="genero" required>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="noContesto">No contesto</option>
+                        <option value="otro">otro</option>
+                    </select>
 
-                <label for="fechNac">Fecha de nacimiento</label>
-                <input type="date" id="fechaNac" name="fechaNac" placeholder="..." required />
-                <label for="fechaEspana">Fecha de llegada a España</label>
-                <input type="date" id="fechaEspana" name="fechaEspana" placeholder="..." required />
-                <label for="estCivil">Estado civil</label>
-                <select id="estadoCivil" name="estadoCivil" required>
-                    <option value="solero">Soltero/a</option>
-                    <option value="parejaHecho">Pareja de hecho</option>
-                    <option value="casado">Casado/a</option>
-                    <option value="separado">Separado/a</option>
-                    <option value="divorciado">Divorciado/a</option>
-                    <option value="viudo">Viudo/a</option>                    
-                </select>
-                <label for="paisNacimiento">País de nacimiento</label>
-                <select id="paisNacimiento" name="paisNacimiento" required>
-                    <option value="espana">España</option>
-                    <option value="francia">Francia</option>             
-                </select>
-                <label for="paisNacionalidad">País de nacionalidad</label>
-                <select id="paisNacionalidad" name="paisNacionalidad" required>
-                    <option value="espana">España</option>
-                    <option value="francia">Francia</option>             
-                </select>
+                    <label for="fechNac">Fecha de nacimiento</label>
+                    <input type="date" id="fechaNac" name="fechaNac" placeholder="..." required />
+                    <label for="fechaEspana">Fecha de llegada a España</label>
+                    <input type="date" id="fechaEspana" name="fechaEspana" placeholder="..." required />
+                    <label for="estCivil">Estado civil</label>
+                    <select id="estadoCivil" name="estadoCivil" required>
+                        <option value="solero">Soltero/a</option>
+                        <option value="parejaHecho">Pareja de hecho</option>
+                        <option value="casado">Casado/a</option>
+                        <option value="separado">Separado/a</option>
+                        <option value="divorciado">Divorciado/a</option>
+                        <option value="viudo">Viudo/a</option>
+                    </select>
+                    <label for="paisNacimiento">País de nacimiento</label>
+                    <input type="text" id="paisNacionalidad" name="ciudad" placeholder="..." required />
+                    </select>
+                    <label for="paisNacionalidad">País de nacionalidad</label>
+                        <input type="text" id="paisNacionalidad" name="ciudad" placeholder="..." required />
+                    </select>
 
-                <label for="direccion">Dirección completa</label>
-                <input type="text" id="direccion" name="direccion" placeholder="..." required />
-                <label for="ciudad">Ciudad</label>
-                <input type="text" id="ciudad" name="ciudad" placeholder="..." required />
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="..." required />
+                    <label for="direccion">Dirección completa</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="..." required />
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="..." required />
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="..." required />
 
-                <label for="empadronamiento">Empadronamiento</label>
-                <input type="radio" name="empadronamiento" value="0" >Si</input>
-                <input type="radio" name="empadronamiento" value="1" >No</input>
+                    <label for="empadronamiento">Empadronamiento</label>
+                    <input type="radio" name="empadronamiento" value="0">Si</input>
+                    <input type="radio" name="empadronamiento" value="1">No</input>
 
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="..." required />
-
-                <div class="botones-form">
-                    <a href="/pagUnidadFamiliar">Siguiente</a>
-                    <input type="reset" value="Borrar" />
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="..." required />
                 </div>
+
+                        <div class="botones-form">
+                            <a href="/pagUnidadFamiliar">Siguiente</a>
+                            <input type="reset" value="Borrar" />
+                        </div>
+                        <button type="button" id="prueba">Mostrar</button>
+                        <p id="resultado">a</p>
             </form>
         </section>
 
     </header>
-    
-
 </body>
 
 </html>

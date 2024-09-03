@@ -27,6 +27,21 @@ const paginaNuevoParticipante = (req, res) => {
   res.sendFile("./views/nuevoParticipante.html", optionsRuta); // le enviamos la ruta
 }; 
 
+/** PAGINA DE UNIDAD FAMILIAR */
+const paginaUnidadFamiliar = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+
+  //let existeUD = document.querySelector('input[name="existeUD"]:checked');
+  //if (existeUD.value == 0){
+  //  res.sendFile("./views/buscarUDFamiliar.html", optionsRuta);
+  //} else {
+    res.sendFile("./views/unidadFamiliar.html", optionsRuta); // le enviamos la ruta
+  //}
+}; 
+
 /** PAGINA DE NUEVA UNIDAD FAMILIAR */
 const paginaNuevaUnidadFamiliar = (req, res) => {
   //Enviamos la dirección de un html
@@ -34,15 +49,6 @@ const paginaNuevaUnidadFamiliar = (req, res) => {
     root: path.join(__dirname, "../public"),
   };
   res.sendFile("./views/nuevaUnidadFamiliar.html", optionsRuta); // le enviamos la ruta
-}; 
-
-/** PAGINA DE UNIDAD FAMILIAR */
-const paginaUnidadFamiliar = (req, res) => {
-  //Enviamos la dirección de un html
-  const optionsRuta = {
-    root: path.join(__dirname, "../public"),
-  };
-  res.sendFile("./views/unidadFamiliar.html", optionsRuta); // le enviamos la ruta
 }; 
 
 /** PAGINA DE SALUD */
