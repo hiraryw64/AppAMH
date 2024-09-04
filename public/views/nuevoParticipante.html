@@ -27,9 +27,9 @@
 
                 <h3><strong>Datos personales</strong></h3>
 
-                <label for="proteccionDatos">Documento de proteccion de datos</label>
+                <label for="proteccionDatos">Documento de protección de datos</label>
                 <input type="radio" name="proteccionDatos" value="0">Sí</input>
-                <input type="radio" name="proteccionDatos" value="1">No</input>
+                <input type="radio" name="proteccionDatos" value="1" checked>No</input>
 
                 <div id="contFormulario">
                     <label for="nombre">Nombre</label>
@@ -44,8 +44,8 @@
                     <select id="genero" name="genero" required>
                         <option value="Hombre">Hombre</option>
                         <option value="Mujer">Mujer</option>
-                        <option value="noContesto">No contesto</option>
-                        <option value="otro">otro</option>
+                        <option value="noContesto">Paso palabra</option>
+                        <option value="otro">Otro</option>
                     </select>
 
                     <label for="fechNac">Fecha de nacimiento</label>
@@ -76,7 +76,7 @@
                     <input type="tel" id="telefono" name="telefono" placeholder="..." required />
 
                     <label for="empadronamiento">Empadronamiento</label>
-                    <input type="radio" name="empadronamiento" value="0">Si</input>
+                    <input type="radio" name="empadronamiento" value="0">Sí</input>
                     <input type="radio" name="empadronamiento" value="1">No</input>
 
                     <label for="email">Correo electrónico</label>
@@ -84,11 +84,11 @@
                 </div>
 
                         <div class="botones-form">
-                            <a href="/pagUnidadFamiliar">Siguiente</a>
+                            <button type="button" id="comprobar">Comprobar</button>
                             <input type="reset" value="Borrar" />
+                            <a id="siguiente" href="/pagUnidadFamiliar">Siguiente</a>
                         </div>
-                        <button type="button" id="prueba">Mostrar</button>
-                        <p id="resultado">a</p>
+                        <p id="resultado"></p>
             </form>
         </section>
 
