@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Participante</title>
+    <title>Unidad Familiar - Nuevo Participante</title>
     <script type="module" async src="./javaScript/index.js"></script>
     <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +20,12 @@
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_udFamiliar" action="" method="post">
-                                
+
                 <h3><strong>Unidad Familiar</strong></h3>
-                
+
                 <label for="miembros">Miembros (contando la persona)</label>
                 <input type="number" id="miembros" name="miembros" placeholder="..." required />
-                
+
                 <label for="cantMenores">Número de menores</label>
                 <input type="number" id="cantMenores" name="cantMenores" placeholder="..." required />
                 <label for="cantMenores">Número de menores</label>
@@ -39,14 +39,16 @@
 
 
                 <div class="botones-form">
-                    <a href="/pagSalud">Siguiente</a>
+                    <button type="button" id="comprobar">Comprobar</button>
                     <input type="reset" value="Borrar" />
+                    <a href="/pagNuevaSalud">Siguiente</a>
+                    <a href="/pagNuevoParticipante">Anterior</a>
                 </div>
             </form>
         </section>
 
     </header>
-    
+
 
 </body>
 

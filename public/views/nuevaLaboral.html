@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboral - Nuevo participante</title>
+    <script type="module" async src="./javaScript/index.js"></script>
+    <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="divCuerpo">
+        <section class="formacion">
+            <h2>FICHA DE ACOGIDA</h2>
+
+            <form id="form_laboral" action="" method="post">
+
+                <h3><strong>Laboral</strong></h3>
+
+
+
+                <label for="premisoTrabajo">¿Tiene permiso de trabajo?</label>
+                <input type="radio" name="premisoTrabajo" value="0">Si</input>
+                <input type="radio" name="premisoTrabajo" value="1" checked>No</input>
+
+                <label for="experienciaLaboral">¿Tiene experiencia laboral?</label>
+                <input type="radio" name="experienciaLaboral" value="0">Si</input>
+                <input type="radio" name="experienciaLaboral" value="1" checked>No</input>
+
+                <label for="inscritoDemandante">¿Está inscrito como demandante de empleo?</label>
+                <input type="radio" name="inscritoDemandante" value="0">Si</input>
+                <input type="radio" name="inscritoDemandante" value="1" checked>No</input>
+
+                <label for="situacionLaboral">Situación laboral actual (desempleo, empleo, estudiante...)</label>
+                <input type="text" id="situacionLaboral" name="situacionLaboral" placeholder="..." required />
+                <label for="tipoContrato">Especificar el tipo de contrato</label>
+                <input type="text" id="tipoContrato" name="tipoContrato" placeholder="..." />
+                <label for="tipoJornada">Especificar el tipo de jornada laboral</label>
+                <input type="text" id="tipoJornada" name="tipoJornada" placeholder="..." />
+                <label for="tipoSector">Especificar el sector en el que trabaja</label>
+                <input type="text" id="tipoSector" name="tipoSector" placeholder="..." />
+
+                <label for="sectoresExpPrevia">Especificar los sectores de experiencia previa</label>
+                <input type="text" id="sectoresExpPrevia" name="sectoresExpPrevia" placeholder="..." />
+                <label for="otrosDatosExpPrevia">Otros datos de interés sobre experiencia laboral</label>
+                <input type="text" id="otrosDatosExpPrevia" name="otrosDatosExpPrevia" placeholder="..." />
+
+
+
+                <div class="botones-form">
+                    <button type="button" id="comprobar">Comprobar</button>
+                    <input type="reset" value="Borrar" />
+                    <a href="/pagNuevoHistorico">Siguiente</a>
+                    <a href="/pagNuevaFormacion">Anterior</a>
+                </div>
+            </form>
+        </section>
+
+    </header>
+
+
+</body>
+
+</html>

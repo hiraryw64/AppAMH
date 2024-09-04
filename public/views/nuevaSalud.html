@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud - Nuevo participante</title>
+    <script type="module" async src="./javaScript/index.js"></script>
+    <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="divCuerpo">
+        <section class="salud">
+            <h2>FICHA DE ACOGIDA</h2>
+
+            <form id="form_salud" action="" method="post">
+
+                <h3><strong>Salud</strong></h3>
+
+                <label for="cuestionesGraves">Cuestiones graves</label>
+                <input type="radio" name="cuestionesGraves" value="0">Si</input>
+                <input type="radio" name="cuestionesGraves" value="1">No</input>
+                <label for="especificacionesGraves">Especificar cuestiones graves</label>
+                <input type="text" id="especificacionesGraves" name="especificacionesGraves" placeholder="..." />
+
+                <label for="discapacidadReconocida">Discapacidad reconocida</label>
+                <input type="radio" name="discapacidadReconocida" value="0">Si</input>
+                <input type="radio" name="discapacidadReconocida" value="1">No</input>
+                <label for="especificacionesDiscapacidad">Especificar discapacidad reconocida</label>
+                <input type="text" id="especificacionesDiscapacidad" name="especificacionesDiscapacidad"
+                    placeholder="..." />
+                <label for="asistenciaSanitaria">Asistencia sanitaria (no tiene, en trámite, Seguridad Social, seguro
+                    privado, ...)</label>
+                <input type="text" id="asistenciaSanitaria" name="asistenciaSanitaria" placeholder="..." required />
+
+
+                <div class="botones-form">
+                    <button type="button" id="comprobar">Comprobar</button>
+                    <input type="reset" value="Borrar" />
+                    <a href="/pagNuevaFormacion">Siguiente</a>
+                    <a href="/pagNuevaUnidadFamiliar">Anterior</a>
+                </div>
+            </form>
+        </section>
+
+    </header>
+
+
+</body>
+
+</html>

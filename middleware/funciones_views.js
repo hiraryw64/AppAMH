@@ -51,13 +51,40 @@ const paginaNuevaUnidadFamiliar = (req, res) => {
   res.sendFile("./views/nuevaUnidadFamiliar.html", optionsRuta); // le enviamos la ruta
 }; 
 
-/** PAGINA DE SALUD */
-const paginaSalud = (req, res) => {
+/** PAGINA DE NUEVA SALUD*/
+const paginaNuevaSalud = (req, res) => {
   //Enviamos la dirección de un html
   const optionsRuta = {
     root: path.join(__dirname, "../public"),
   };
-  res.sendFile("./views/salud.html", optionsRuta); // le enviamos la ruta
+  res.sendFile("./views/nuevaSalud.html", optionsRuta); // le enviamos la ruta
+}; 
+
+/** PAGINA DE NUEVA FORMACIÓN */
+const paginaNuevaFormacion = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/nuevaFormacion.html", optionsRuta); // le enviamos la ruta
+}; 
+
+/** PAGINA DE NUEVA LABORAL */
+const paginaNuevaLaboral = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/nuevaLaboral.html", optionsRuta); // le enviamos la ruta
+}; 
+
+/** PAGINA DE NUEVO HISTÓRICO */
+const paginaNuevoHistorico = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/nuevoHistorico.html", optionsRuta); // le enviamos la ruta
 }; 
 
   module.exports = {
@@ -65,5 +92,8 @@ const paginaSalud = (req, res) => {
     paginaNuevoParticipante,
     paginaNuevaUnidadFamiliar,
     paginaUnidadFamiliar,
-    paginaSalud
+    paginaNuevaSalud,
+    paginaNuevaFormacion,
+    paginaNuevaLaboral,
+    paginaNuevoHistorico
   };

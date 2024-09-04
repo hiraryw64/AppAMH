@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Participante</title>
+    <title>Histórico - Nuevo participante</title>
     <script type="module" async src="./javaScript/index.js"></script>
     <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,27 +16,19 @@
 
 <body>
     <header class="divCuerpo">
-        <section class="unidadFamiliar">
+        <section class="formacion">
             <h2>FICHA DE ACOGIDA</h2>
 
-            <form id="form_udFamiliar" action="" method="post">
+            <form id="form_historico" action="" method="post">
 
-                <h3><strong>¿Pertenece a alguna unidad familiar existente?</strong></h3>
-
-                <input type="radio" name="existeUD" value="0">Sí</input>
-                <input type="radio" name="existeUD" value="1">No</input>
-
-                <label for="puestoFamiliar">Puesto que ocupa en la unidad familiar</label>
-                <input type="text" id="puestoFamiliar" name="puestoFamiliar" placeholder="..." required />
-
-
+                <h3><strong>Histórico de actuaciones</strong></h3>
 
 
                 <div class="botones-form">
                     <button type="button" id="comprobar">Comprobar</button>
+                    <input type="submit" value="Guardar" />
                     <input type="reset" value="Borrar" />
-                    <a href="/pagNuevaUnidadFamiliar">Siguiente</a>
-                    <a href="/pagNuevoParticipante">Anterior</a>
+                    <a href="/pagNuevaLaboral">Anterior</a>
                 </div>
             </form>
         </section>

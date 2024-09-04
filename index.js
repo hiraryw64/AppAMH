@@ -1,5 +1,13 @@
 //** IMPORTAMOS */
-const {paginaMenu, paginaNuevoParticipante, paginaNuevaUnidadFamiliar, paginaUnidadFamiliar, paginaSalud} = require("./middleware/funciones_views.js");
+const {
+  paginaMenu,
+  paginaNuevoParticipante,
+  paginaNuevaUnidadFamiliar,
+  paginaUnidadFamiliar,
+  paginaNuevaSalud,
+  paginaNuevaFormacion,
+  paginaNuevaLaboral,
+  paginaNuevoHistorico } = require("./middleware/funciones_views.js");
 
 
 /** --- CREAMOS LAS CONSTANTES QUE NOS DESCARGARAN, INDICAN LA RUTA Y EJECUTAN "express" --- */
@@ -32,14 +40,21 @@ app.get("/pagNuevaUnidadFamiliar", paginaNuevaUnidadFamiliar);
 
 //Página Existe Unidad Familiar
 app.get("/pagUnidadFamiliar", paginaUnidadFamiliar)
-  // revisar condiciones, si if == no --> entrar en paginaNuevaunidadFamiliar, si if == si --> recoger datos de la ud familiar existente y abrir pagSalud
+// revisar condiciones, si if == no --> entrar en paginaNuevaunidadFamiliar, si if == si --> recoger datos de la ud familiar existente y abrir pagSalud
 
+//Página Nueva Salud
+app.get("/pagNuevaSalud", paginaNuevaSalud);
 
-//Página Salud
-app.get("/pagSalud", paginaSalud);
+//Página Nueva Formación
+app.get("/pagNuevaFormacion", paginaNuevaFormacion);
 
+//Página Nueva laboral
+app.get("/pagNuevaLaboral", paginaNuevaLaboral);
+
+//Página Nuevo histórico
+app.get("/pagNuevoHistorico", paginaNuevoHistorico);
 
 /* --- START SERVER --- */
 app.listen(5000, function () {
-    console.log("Server running");
-  }); // OBLIGATORIO
+  console.log("Server running");
+}); // OBLIGATORIO
