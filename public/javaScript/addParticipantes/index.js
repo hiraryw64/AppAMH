@@ -1,10 +1,14 @@
 //const db = require("../crear_bd.js");
-import { contFormulario, fechaAcogida, nombreParticipante, apellido1, apellido2, dni, genero, fechaNac, fechaEspana, estadoCivil, paisNacimiento, paisNacionalidad, direccion, ciudad, telefono, email, botonPrueba, resultado } from './inserts.js';
+let contFormulario = document.getElementById("contFormulario");
+let botonComprobar = document.getElementById("comprobar");
+let botonSiguiente = document.getElementById("siguiente");
+
 contFormulario.style.visibility = "hidden";
+botonSiguiente.style.visibility = "hidden";
 
+botonComprobar.addEventListener("click", () => {
+    let proteccionDatos = document.querySelector('input[name="proteccionDatos"]:checked');
 
-botonPrueba.addEventListener("click", () => {
-    let contFormulario = document.getElementById("contFormulario");
     let fechaAcogida = document.getElementById("f_Acogida").value;
     let nombreParticipante = document.getElementById("nombre").value;
     let apellido1 = document.getElementById("apellido1").value;
@@ -13,29 +17,66 @@ botonPrueba.addEventListener("click", () => {
     let genero = document.getElementById("genero").value;
     let fechaNac = document.getElementById("fechaNac").value;
     let fechaEspana = document.getElementById("fechaEspana").value;
-    let estadoCivil = document.getElementById("estadoCivil").value;
+    let estadoCivil = document.getElementById("estadoCivil").value; //?????????????
     let paisNacimiento = document.getElementById("paisNacimiento").value;
     let paisNacionalidad = document.getElementById("paisNacionalidad").value;
     let direccion = document.getElementById("direccion").value;
     let ciudad = document.getElementById("ciudad").value;
     let telefono = document.getElementById("telefono").value;
     let email = document.getElementById("email").value;
+    let empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');
 
-    let botonPrueba = document.getElementById("prueba");
     let resultado = document.getElementById("resultado");
-
-
-    let proteccionDatos = document.querySelector('input[name="proteccionDatos"]:checked');
 
     if (proteccionDatos.value == 0) {
         contFormulario.style.visibility = "visible";
-        let empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');
-        let nombreNuevo = nombreParticipante;
-        resultado.textContent += apellido1;
-        resultado.textContent += nombreNuevo;
+        resultado.textContent = "";
 
+        //Comprobaciones
+        if (fechaAcogida == "") {
+            resultado.textContent += "Debe indicarse la fecha de acogida.";
+        } else {
+            if (nombreParticipante == "") {
+                resultado.innerHTML += "Debe indicarse el nombre.";
+            } else {
+                if (apellido1 == "") {
+                    resultado.textContent += "Debe indicarse al menos un apellido.";
+                } else {
+                    if (fechaNac == "") {
+                        resultado.textContent += "Debe indicarse la fecha de nacimiento.";
+                    } else {
+                        if (fechaEspana == "") {
+                            resultado.textContent += "Debe indicarse la fecha de llegada a España.";
+                        } else {
+                            if (paisNacimiento == "") {
+                                resultado.textContent += "Debe indicarse el país de nacimiento.";
+                            } else {
+                                if (paisNacionalidad == "") {
+                                    resultado.textContent += "Debe indicarse el país de nacionalidad.";
+                                } else {
+                                    if (ciudad == "") {
+                                        resultado.textContent += "Debe indicarse la ciudad.";
+                                    } else {
+                                        if (telefono == "") {
+                                            resultado.textContent += "Debe indicarse un número de teléfono.";
+                                        } else {
+                                            if (empadronamiento == null) {
+                                                resultado.textContent += "Debe indicarse si el participante está empadronado.";
+                                            } else {
+                                                resultado.textContent = "Campos correctos.";
+                                                botonSiguiente.style.visibility = "visible";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     } else {
+        resultado.textContent = "No se pueden recoger datos de las personas que no hayan firmado la ley de protección de datos.";
         contFormulario.style.visibility = "hidden";
     }
-
 });
