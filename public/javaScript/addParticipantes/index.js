@@ -3,6 +3,7 @@ let contFormulario = document.getElementById("contFormulario");
 let botonComprobar = document.getElementById("comprobar");
 let botonSiguiente = document.getElementById("siguiente");
 let botonBorrar = document.getElementById("borrar");
+let resultado = document.getElementById("resultado");
 
 contFormulario.style.visibility = "hidden";
 botonSiguiente.style.visibility = "hidden";
@@ -44,9 +45,7 @@ botonComprobar.addEventListener("click", () => {
     let ciudad = document.getElementById("ciudad").value;
     let telefono = document.getElementById("telefono").value;
     let email = document.getElementById("email").value;
-    let empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');
-
-    let resultado = document.getElementById("resultado");
+    let empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');    
 
     //Comprobaciones
     if (fechaAcogida == "") {
