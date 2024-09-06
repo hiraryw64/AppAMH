@@ -1,4 +1,21 @@
 //const db = require("../crear_bd.js");
+let fechaAcogida;
+let nombreParticipante;
+let apellido1;
+let apellido2;
+let dni;
+let genero;
+let fechaNac;
+let fechaEspana;
+let estadoCivil;
+let paisNacimiento;
+let paisNacionalidad;
+let direccion;
+let ciudad;
+let telefono;
+let email;
+let empadronamiento;  
+
 let contFormulario = document.getElementById("contFormulario");
 let botonComprobar = document.getElementById("comprobar");
 let botonSiguiente = document.getElementById("siguiente");
@@ -30,50 +47,50 @@ proteccionDatos.forEach((caso) => {
 
 
 botonComprobar.addEventListener("click", () => {
-    let fechaAcogida = document.getElementById("f_Acogida").value;
-    let nombreParticipante = document.getElementById("nombre").value;
-    let apellido1 = document.getElementById("apellido1").value;
-    let apellido2 = document.getElementById("apellido2").value;
-    let dni = document.getElementById("dni").value;
-    let genero = document.getElementById("genero").value;
-    let fechaNac = document.getElementById("fechaNac").value;
-    let fechaEspana = document.getElementById("fechaEspana").value;
-    let estadoCivil = document.getElementById("estadoCivil").value; //?????????????
-    let paisNacimiento = document.getElementById("paisNacimiento").value;
-    let paisNacionalidad = document.getElementById("paisNacionalidad").value;
-    let direccion = document.getElementById("direccion").value;
-    let ciudad = document.getElementById("ciudad").value;
-    let telefono = document.getElementById("telefono").value;
-    let email = document.getElementById("email").value;
-    let empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');    
+    fechaAcogida = document.getElementById("f_Acogida").value;
+    nombreParticipante = document.getElementById("nombre").value;
+    apellido1 = document.getElementById("apellido1").value;
+    apellido2 = document.getElementById("apellido2").value;
+    dni = document.getElementById("dni").value;
+    genero = document.getElementById("genero").value;
+    fechaNac = document.getElementById("fechaNac").value;
+    fechaEspana = document.getElementById("fechaEspana").value;
+    estadoCivil = document.getElementById("estadoCivil").value;
+    paisNacimiento = document.getElementById("paisNacimiento").value;
+    paisNacionalidad = document.getElementById("paisNacionalidad").value;
+    direccion = document.getElementById("direccion").value;
+    ciudad = document.getElementById("ciudad").value;
+    telefono = document.getElementById("telefono").value;
+    email = document.getElementById("email").value;
+    empadronamiento = document.querySelector('input[name="empadronamiento"]:checked');    
 
     //Comprobaciones
     if (fechaAcogida == "") {
-        resultado.textContent += "Debe indicarse la fecha de acogida.";
+        resultado.textContent = "Debe indicarse la fecha de acogida.";
     } else {
         if (nombreParticipante == "") {
-            resultado.innerHTML += "Debe indicarse el nombre.";
+            resultado.innerHTML = "Debe indicarse el nombre.";
         } else {
             if (apellido1 == "") {
-                resultado.textContent += "Debe indicarse al menos un apellido.";
+                resultado.textContent = "Debe indicarse al menos un apellido.";
             } else {
                 if (fechaNac == "") {
-                    resultado.textContent += "Debe indicarse la fecha de nacimiento.";
+                    resultado.textContent = "Debe indicarse la fecha de nacimiento.";
                 } else {
                     if (fechaEspana == "") {
-                        resultado.textContent += "Debe indicarse la fecha de llegada a España.";
+                        resultado.textContent = "Debe indicarse la fecha de llegada a España.";
                     } else {
                         if (paisNacimiento == "") {
-                            resultado.textContent += "Debe indicarse el país de nacimiento.";
+                            resultado.textContent = "Debe indicarse el país de nacimiento.";
                         } else {
                             if (paisNacionalidad == "") {
-                                resultado.textContent += "Debe indicarse el país de nacionalidad.";
+                                resultado.textContent = "Debe indicarse el país de nacionalidad.";
                             } else {
                                 if (ciudad == "") {
-                                    resultado.textContent += "Debe indicarse la ciudad.";
+                                    resultado.textContent = "Debe indicarse la ciudad.";
                                 } else {
                                     if (telefono == "") {
-                                        resultado.textContent += "Debe indicarse un número de teléfono.";
+                                        resultado.textContent = "Debe indicarse un número de teléfono.";
                                     } else {
                                         if (empadronamiento == null) {
                                             resultado.textContent += "Debe indicarse si el participante está empadronado.";
