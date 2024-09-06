@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Participante</title>
     <script type="module" async src="./javaScript/unidadFamiliar/index.js"></script>
-    <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
+    <link href="../css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,32 +15,44 @@
 </head>
 
 <body>
-    <header class="divCuerpo">
-        <section class="unidadFamiliar">
+    <header>
+        <a class="imgLogo">
+            <img class="logo" src="../imagenes/logo_movilidad_humana.png" />
+        </a>
+    </header>
+
+    <main class="divCuerpo">
+        <section class="datos">
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_udFamiliar" action="" method="post">
-
-                <h3><strong>¿Pertenece a alguna unidad familiar existente?</strong></h3>
-
-                <input type="radio" name="existeUD" value="0">Sí</input>
-                <input type="radio" name="existeUD" value="1" checked>No</input>
-
-                <label for="puestoFamiliar">Puesto que ocupa en la unidad familiar</label>
-                <input type="text" id="puestoFamiliar" name="puestoFamiliar" placeholder="..." required />
-
+                <div class="div_bloque">
+                    <Label for="existeUD">¿Pertenece a alguna unidad familiar existente?</Label>
+                    <div class="divRadioButton">
+                        <input class="divRadioButton" type="radio" name="existeUD" value="0">Sí</input>
+                        <input class="divRadioButton" type="radio" name="existeUD" value="1" checked>No</input>
+                    </div>
+                </div>
+                <div class="div_bloque">
+                    <label for="puestoFamiliar">Puesto que ocupa en la unidad familiar</label>
+                    <input class="inputTexto" type="text" id="puestoFamiliar" name="puestoFamiliar"
+                        placeholder=" Introduzca el puesto que ocupa en la familia (padre, madre, hijo...)" required />
+                </div>
                 <div class="botones-form">
-                    <button type="button" id="comprobar">Comprobar</button>
-                    <input type="reset" value="Borrar" />
-                    <a href="/pagNuevoParticipante">Anterior</a>
-                    <a id="siguiente" href="/pagNuevaUnidadFamiliar">Siguiente</a>
+                    <button class="btnes" type="button" id="comprobar">Comprobar</button>
+                    <input class="btnes" type="reset" id="borrar" value="limpiar" />
+                    <a class="btnes" href="/pagNuevoParticipante">Anterior</a>
+                    <a class="btnes" id="siguiente" href="/pagNuevaUnidadFamiliar">Siguiente</a>
                 </div>
                 <p id="resultado"></p>
             </form>
         </section>
 
-    </header>
-
+    </main>
+<!-- 
+    <footer>
+        © 2024 Olga Gil y Lucía Morado. Todos los derechos reservados
+    </footer> -->
 
 </body>
 

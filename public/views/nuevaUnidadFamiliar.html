@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidad Familiar - Nuevo Participante</title>
     <script type="module" async src="./javaScript/index.js"></script>
-    <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
+    <link href="./css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,40 +15,60 @@
 </head>
 
 <body>
-    <header class="divCuerpo">
-        <section class="unidadFamiliar">
+    <header>
+        <a class="imgLogo">
+            <img class="logo" src="../imagenes/logo_movilidad_humana.png" />
+        </a>
+    </header>
+
+    <main class="divCuerpo">
+        <section class="datos">
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_udFamiliar" action="" method="post">
 
-                <h3><strong>Unidad Familiar</strong></h3>
+                <h3>Unidad Familiar</h3>
+                <div class="div_bloque">
+                    <label for="miembros">Miembros (contando la persona)</label>
+                    <input class="inputTexto" type="number" id="miembros" name="miembros" placeholder=" Introduzca el número de miembros" required />
+                </div>
 
-                <label for="miembros">Miembros (contando la persona)</label>
-                <input type="number" id="miembros" name="miembros" placeholder="..." required />
-
-                <label for="cantMenores">Número de menores</label>
-                <input type="number" id="cantMenores" name="cantMenores" placeholder="..." required />
-                <label for="cantMenores">Número de menores</label>
-                <input type="number" id="cantMenores" name="cantMenores" placeholder="..." required />
-                <label for="edad">Edad de los menores</label>
-                <input type="number" id="edad" name="edad" placeholder="..." required />
-                <label for="cantEscolarizados">Númer de menores escolarizados</label>
-                <input type="number" id="cantEscolarizados" name="cantEscolarizados" placeholder="..." required />
-                <label for="situacion">Especificar relación</label>
-                <input type="text" id="situacion" name="situacion" placeholder="..." required />
-
+                <div class="div_bloque">
+                    <label for="situacion">Situación</label>
+                    <input class="inputTexto" type="text" id="situacion" name="situacion" placeholder=" Introduzcala situación (sin hogar, refugio, compartida, habitación o piso en alquiler, piso o vivienda en propiedad, interna...)" required />
+                </div>
+                
+                
+                <div class="div_bloque">
+                    <label for="cantMenores">Número de menores</label>
+                    <input class="inputTexto" type="number" id="cantMenores" name="cantMenores" placeholder=" Introduzca el número de menores" required />
+                </div>
+                
+                <div class="div_bloque">
+                    <label for="edad">Edad de los menores</label>
+                    <input class="inputTexto" type="number" id="edad" name="edad" placeholder=" Introduzzca la edad de los menores" required />
+                </div>
+                <div class="div_bloque">
+                    <label for="cantEscolarizados">Número de menores escolarizados</label>
+                    <input class="inputTexto" type="number" id="cantEscolarizados" name="cantEscolarizados" placeholder=" Introduzca el número de menores escolarizados" required />
+                </div>
+                
 
                 <div class="botones-form">
-                    <button type="button" id="comprobar">Comprobar</button>
-                    <input type="reset" value="Borrar" />
-                    <a href="/pagNuevaSalud">Siguiente</a>
-                    <a href="/pagUnidadFamiliar">Anterior</a>
+                    <button class="btnes" type="button" id="comprobar">Comprobar</button>
+                    <input class="btnes" type="reset" id="borrar" value="limpiar" />
+                    <a class="btnes" href="/pagUnidadFamiliar">Anterior</a>
+                    <a class="btnes" href="/pagNuevaSalud">Siguiente</a>
                 </div>
             </form>
         </section>
 
-    </header>
+    </main>
 
+    <!-- 
+    <footer>
+        © 2024 Olga Gil y Lucía Morado. Todos los derechos reservados
+    </footer> -->
 
 </body>
 
