@@ -15,54 +15,85 @@
 </head>
 
 <body>
-    <header class="divCuerpo">
-        <section class="formacion">
+    <header>
+        <a class="imgLogo">
+            <img class="logo" src="../imagenes/logo_movilidad_humana.png" />
+        </a>
+    </header>
+
+    <main class="divCuerpo">
+        <section class="datos">
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_laboral" action="" method="post">
 
-                <h3><strong>Laboral</strong></h3>
+                <h3>Laboral</h3>
 
 
+                <div class="div_bloque">
+                    <label for="premisoTrabajo">¿Tiene permiso de trabajo?</label>
+                    <div class="divRadioButton">
+                        <input class="divRadioButton" type="radio" name="premisoTrabajo" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="premisoTrabajo" value="1" checked>No</input>
+                    </div>
+                </div>
+                <div class="div_bloque">
+                    <label for="experienciaLaboral">¿Tiene experiencia laboral?</label>
+                    <div class="divRadioButton">
+                        <input class="divRadioButton" type="radio" name="experienciaLaboral" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="experienciaLaboral" value="1"
+                            checked>No</input>
+                    </div>
+                </div>
+                <div class="div_bloque">
+                    <label for="inscritoDemandante">¿Está inscrito como demandante de empleo?</label>
+                    <div class="divRadioButton">
+                        <input class="divRadioButton" type="radio" name="inscritoDemandante" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="inscritoDemandante" value="1"
+                            checked>No</input>
+                    </div>
+                </div>
+                <div class="div_bloque">
+                    <label for="situacionLaboral">Situación laboral actual (desempleo, empleo, estudiante...)</label>
+                    <input class="inputTexto" type="text" id="situacionLaboral" name="situacionLaboral"
+                        placeholder="..." required />
+                </div>
+                <div class="div_bloque">
+                    <label for="tipoContrato">Especificar el tipo de contrato</label>
+                    <input class="inputTexto" type="text" id="tipoContrato" name="tipoContrato" placeholder="..." />
+                </div>
+                <div class="div_bloque">
+                    <label for="tipoJornada">Especificar el tipo de jornada laboral</label>
+                    <input class="inputTexto" type="text" id="tipoJornada" name="tipoJornada" placeholder="..." />
+                </div>
+                <div class="div_bloque">
+                    <label for="tipoSector">Especificar el sector en el que trabaja</label>
+                    <input class="inputTexto" type="text" id="tipoSector" name="tipoSector" placeholder="..." />
+                </div>
+                <div class="div_bloque">
 
-                <label for="premisoTrabajo">¿Tiene permiso de trabajo?</label>
-                <input type="radio" name="premisoTrabajo" value="0">Si</input>
-                <input type="radio" name="premisoTrabajo" value="1" checked>No</input>
+                    <label for="sectoresExpPrevia">Especificar los sectores de experiencia previa</label>
+                    <input class="inputTexto" type="text" id="sectoresExpPrevia" name="sectoresExpPrevia"
+                        placeholder="..." />
+                </div>
+                <div class="div_bloque">
+                    <label for="otrosDatosExpPrevia">Otros datos de interés sobre experiencia laboral</label>
+                    <input class="inputTexto" type="text" id="otrosDatosExpPrevia" name="otrosDatosExpPrevia"
+                        placeholder="..." />
 
-                <label for="experienciaLaboral">¿Tiene experiencia laboral?</label>
-                <input type="radio" name="experienciaLaboral" value="0">Si</input>
-                <input type="radio" name="experienciaLaboral" value="1" checked>No</input>
-
-                <label for="inscritoDemandante">¿Está inscrito como demandante de empleo?</label>
-                <input type="radio" name="inscritoDemandante" value="0">Si</input>
-                <input type="radio" name="inscritoDemandante" value="1" checked>No</input>
-
-                <label for="situacionLaboral">Situación laboral actual (desempleo, empleo, estudiante...)</label>
-                <input type="text" id="situacionLaboral" name="situacionLaboral" placeholder="..." required />
-                <label for="tipoContrato">Especificar el tipo de contrato</label>
-                <input type="text" id="tipoContrato" name="tipoContrato" placeholder="..." />
-                <label for="tipoJornada">Especificar el tipo de jornada laboral</label>
-                <input type="text" id="tipoJornada" name="tipoJornada" placeholder="..." />
-                <label for="tipoSector">Especificar el sector en el que trabaja</label>
-                <input type="text" id="tipoSector" name="tipoSector" placeholder="..." />
-
-                <label for="sectoresExpPrevia">Especificar los sectores de experiencia previa</label>
-                <input type="text" id="sectoresExpPrevia" name="sectoresExpPrevia" placeholder="..." />
-                <label for="otrosDatosExpPrevia">Otros datos de interés sobre experiencia laboral</label>
-                <input type="text" id="otrosDatosExpPrevia" name="otrosDatosExpPrevia" placeholder="..." />
-
-
+                </div>
 
                 <div class="botones-form">
-                    <button type="button" id="comprobar">Comprobar</button>
-                    <input type="reset" value="Borrar" />
-                    <a href="/pagNuevoHistorico">Siguiente</a>
-                    <a href="/pagNuevaFormacion">Anterior</a>
+                    <button class="btnes" type="button" id="comprobar">Comprobar</button>
+                    <input class="btnes" type="reset" id="borrar" value="Limpiar" />
+                    <a class="btnes" href="/pagNuevaFormacion">Anterior</a>
+                    <a class="btnes" href="/pagNuevoHistorico">Siguiente</a>
+
                 </div>
             </form>
         </section>
 
-    </header>
+    </main>
 
 
 </body>

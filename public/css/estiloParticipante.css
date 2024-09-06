@@ -44,6 +44,7 @@ main {
     width: 700px;
     border-top: 2px solid #af27ce;
     border-bottom: 2px solid #af27ce;
+    margin-bottom: 20px;
 }
 
 h2 {
