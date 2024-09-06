@@ -73,11 +73,19 @@ form {
     flex-direction: row;
     margin-bottom: 20px;
     justify-content: space-between;
+    align-items: center;
 }
 .inputTexto{
     height: 30px;
     width: 400px;
     border: 1px solid #af27ce;
+}
+
+.definir{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border-top: 2px solid #af27ce;
+    border-bottom: 2px solid #af27ce;
 }
 
 h3 {
