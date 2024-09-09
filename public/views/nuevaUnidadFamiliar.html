@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidad Familiar - Nuevo Participante</title>
-    <script type="module" async src="./javaScript/index.js"></script>
+    <script type="module" async src="./javaScript/nuevaUnidadFamiliar/index.js"></script>
     <link href="./css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,10 +52,10 @@
                         pattern="\d*" placeholder=" Introduzca el número de menores escolarizados" required />
                 </div>
                 <div class="definir">
-                    <div class="div_bloque">
-                        <label for="edad">Edad de los menores</label>
+                    <div id="divMenores" class="div_bloque">
+                        <label for="edad">Edad del menor</label>
                         <input class="inputTexto" type="number" id="edad" name="edad" pattern="\d*"
-                            placeholder=" Introduzca la edad de los menores" required />
+                            placeholder=" Introduzca la edad del menor" required />
                     </div>
                 </div>
 
@@ -63,8 +63,9 @@
                     <button class="btnes" type="button" id="comprobar">Comprobar</button>
                     <input class="btnes" type="reset" id="borrar" value="Limpiar" />
                     <a class="btnes" href="/pagUnidadFamiliar">Anterior</a>
-                    <a class="btnes" href="/pagNuevaSalud">Siguiente</a>
+                    <a class="btnes" id="siguiente" href="/pagNuevaSalud">Siguiente</a>
                 </div>
+                <p id="resultado"></p>
             </form>
         </section>
 
