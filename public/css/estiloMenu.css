@@ -30,6 +30,12 @@ header {
 
 .navMenu ul>li {
     float: left;
+    
+}
+
+.ul_subMenu{
+    display: flex;
+    flex-direction: column;
 }
 
 ul li {
