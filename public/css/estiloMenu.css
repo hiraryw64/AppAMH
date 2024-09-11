@@ -9,77 +9,102 @@ html {
     padding: 0px;
 }
 
-/* header {
+header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 98px;
     border-bottom: 2px solid #af27ce;
-    width: 87%;
-    position: fixed;
-    z-index: 5;
-
-} */
+}
 
 .navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Comfortaa';
-    font-size: 21px;
+    font-size: 18px;
+    /* margin: auto; */
+    width: 100%;
     align-content: center;
+    /* border: 2px solid red; */
 }
 
-.navMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-}
-.navMenu ul li {
-    background-color: #2e518b;
-    position: relative;
+.navMenu ul>li {
     float: left;
-    margin: 0;
-    padding: 0;
-    
 }
 
-.navMenu ul li:hover {
-    background: #5b78a7;
+ul li {
+    list-style: none;
 }
 
-.navMenu ul a {
-    display: block;
-    color: #fff;
+
+.navMenu ul li a {
+    color: #af27ce;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 15px;
-    padding: 10px;
-    font-family: "Roboto";
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding: 10px 12px;
+    display: block;
 
 }
 
+.navMenu li a:hover {
+    background-color: #af27ce;
+    color: white;
+}
 
+.navMenu li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.navMenu ul li:hover>ul {
+    display: block;
+}
+
+.navMenu li ul li {
+    position: relative;
+}
+
+.navMenu li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+
+
+/* 
 body {
     color: #af27ce;
     font-family: 'Comfortaa';
     font-size: 16px;
-}
+} */
 
 .imgLogo {
     display: flex;
-    justify-content: space-around;
+    margin-left: 10px;
+    /* width: 600px; */
 }
 
 .logo {
     margin-top: 20px;
     margin-bottom: 30px;
-    width: 28%;
+    width: 60%;
 }
 
-footer {
+.divPerfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 20px;
+}
+
+.iconoGrande img {
+    height: 45px;
+}
+
+
+/* footer {
     font-family: 'Roboto';
     font-size: 14px;
     display: flex;
@@ -88,4 +113,4 @@ footer {
     background-color: #af27ce;
     color: white;
     align-items: center;
-}
+} */
