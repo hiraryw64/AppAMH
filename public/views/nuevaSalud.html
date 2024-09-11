@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud - Nuevo participante</title>
-    <script type="module" async src="./javaScript/index.js"></script>
+    <script type="module" async src="./javaScript/nuevaSalud/index.js"></script>
     <link href="../css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
                 <div class="div_bloque">
                     <label for="cuestionesGraves">Cuestiones graves</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="cuestionesGraves" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="cuestionesGraves" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="cuestionesGraves" value="1" checked>No</input>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="div_bloque">
                     <label for="discapacidadReconocida">Discapacidad reconocida</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="discapacidadReconocida" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="discapacidadReconocida" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="discapacidadReconocida" value="1" checked>No</input>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="div_bloque">
                     <label for="asistenciaSanitaria">Asistencia sanitaria (no tiene, en trámite, Seguridad Social,
                         seguro
-                        privado, ...)</label>
+                        privado...)</label>
                     <input class="inputTexto" type="text" id="asistenciaSanitaria" name="asistenciaSanitaria" placeholder=" Especificar la asistencia sanitaria que tiene" required />
                 </div>
 
@@ -63,7 +63,7 @@
                     <button class="btnes" type="button" id="comprobar">Comprobar</button>
                     <input class="btnes" type="reset" id="borrar" value="Limpiar" />
                     <a class="btnes" href="/pagNuevaUnidadFamiliar">Anterior</a>
-                    <a class="btnes" href="/pagNuevaFormacion">Siguiente</a>
+                    <a class="btnes" id="siguiente" href="/pagNuevaFormacion">Siguiente</a>
                 </div>
             </form>
         </section>

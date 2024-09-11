@@ -4,6 +4,8 @@ let cantMenores;
 let cantEscolarizados;
 let totalCampos = 0;
 let contadorCampos = 0;
+let cantMenoresAnterior = 0;
+let revisarEdades;
 
 
 let botonComprobar = document.getElementById("comprobar");
@@ -22,8 +24,6 @@ botonComprobar.addEventListener("click", () => {
     let nuevoDiv;
     let labelEdadMenores;
     let inputEdadMenores;
-    let revisarEdades;
-    let cantMenoresAnterior;
 
     if (miembros == "") {
         resultado.textContent = "Debe indicarse la cantidad de miembros que forman la unidad familiar.";
@@ -34,7 +34,7 @@ botonComprobar.addEventListener("click", () => {
             if (cantMenores == "") {
                 resultado.textContent = "Debe indicarse la cantidad de menores que forman la unidad familiar.";
             } else {
-                if (cantMenores !== cantMenoresAnterior) {
+                if (cantMenores != cantMenoresAnterior) {
                     cantMenoresAnterior = cantMenores;
                     divMenores = document.getElementById("divMenores");
                     while (divMenores.childElementCount > 0) {
@@ -47,6 +47,7 @@ botonComprobar.addEventListener("click", () => {
 
                         labelEdadMenores = document.createElement("label");
                         labelEdadMenores.textContent = "Edad del menor";
+                        
 
                         inputEdadMenores = document.createElement("input");
                         inputEdadMenores.className = "inputTexto";
@@ -60,20 +61,17 @@ botonComprobar.addEventListener("click", () => {
                         divMenores.appendChild(nuevoDiv);
                     }
                 }
-
-                /*if (resultado.textContent != "Debe indicarse la edad de todos los menores.") {
-                        botonSiguiente.style.visibility = "visible";
-                        resultado.textContent = "Campos correctos.";
-                    }*/
-
                 if (cantEscolarizados == "") {
                     resultado.textContent = "Debe indicarse la cantidad de menores que están escolarizados.";
                 } else {
+                    //HASTA AQUÍ LLEGA
                     for (let i = 0; i < cantMenores; i++) {
                         revisarEdades = document.getElementById("edad" + i);
-                        if (revisarEdades == "") {
-                            resultado.textContent += "edad" + i;
+                        if (revisarEdades.value == "") {
                             resultado.textContent = "Debe indicarse la edad de todos los menores.";
+                        } else {
+                            resultado.textContent = "Campos correctos.";
+                            botonSiguiente.style.visibility = "visible";
                         }
                     }
                 }
