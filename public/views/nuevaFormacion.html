@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formación - Nuevo participante</title>
-    <script type="module" async src="./javaScript/index.js"></script>
+    <script type="module" async src="./javaScript/nuevaFormacion/index.js"></script>
     <link href="../css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
 
                 <h3>Formación</h3>
                 <div class="div_bloque">
-                    <label for="nivelEstudios">Nivel de estudios (sin esstudios, básica, secundaria...)</label>
+                    <label for="nivelEstudios">Nivel de estudios (sin estudios, primaria, secundaria...)</label>
                     <input class="inputTexto" type="text" id="nivelEstudios" name="nivelEstudios"
                         placeholder=" Especifique el nivel de estudios" required />
                 </div>
@@ -40,7 +40,7 @@
                 <div class="div_bloque">
                     <label for="formacionComplementaria">Formación complementaria o no reglada</label>
                     <input class="inputTexto" type="text" id="formacionComplementaria" name="formacionComplementaria"
-                        placeholder=" Especifique la formacióncomplementaria o no reglada" />
+                        placeholder=" Especifique la formación complementaria o no reglada" />
                 </div>
                 <div class="div_bloque">
                     <label for="otrosDatos">Otros datos sobre formación</label>
@@ -50,7 +50,7 @@
                 <div class="div_bloque">
                     <label for="tieneCarnetAlimentos">¿Tiene carnet de manipulador de alimentos?</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="tieneCarnetAlimentos" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="tieneCarnetAlimentos" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="tieneCarnetAlimentos" value="1"
                             checked>No</input>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="div_bloque">
                     <label for="tieneCarnetConducir">¿Tiene carnet de conducir?</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="tieneCarnetConducir" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="tieneCarnetConducir" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="tieneCarnetConducir" value="1"
                             checked>No</input>
                     </div>
@@ -66,14 +66,14 @@
                 <div class="div_bloque">
                     <label for="tieneCV">¿Tiene Curriculum Vitae?</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="tieneCV" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="tieneCV" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="tieneCV" value="1" checked>No</input>
                     </div>
                 </div>
                 <div class="div_bloque">
                     <label for="tieneEstudiosHomologados">¿Tiene estudios homologados?</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="tieneEstudiosHomologados" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="tieneEstudiosHomologados" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="tieneEstudiosHomologados" value="1"
                             checked>No</input>
                     </div>
@@ -81,7 +81,7 @@
                 <div class="div_bloque">
                     <label for="tieneCarnetConvalidado">¿Tiene carnet convalidado?</label>
                     <div class="divRadioButton">
-                        <input class="divRadioButton" type="radio" name="tieneCarnetConvalidado" value="0">Si</input>
+                        <input class="divRadioButton" type="radio" name="tieneCarnetConvalidado" value="0">Sí</input>
                         <input class="divRadioButton" type="radio" name="tieneCarnetConvalidado" value="1"
                             checked>No</input>
                     </div>
@@ -91,8 +91,9 @@
                     <button class="btnes" type="button" id="comprobar">Comprobar</button>
                     <input class="btnes" type="reset" id="borrar" value="Limpiar" />
                     <a class="btnes" href="/pagNuevaSalud">Anterior</a>
-                    <a class="btnes" href="/pagNuevaLaboral">Siguiente</a>
+                    <a id="siguiente" class="btnes" href="/pagNuevaLaboral">Siguiente</a>
                 </div>
+                <p id="resultado"></p>
             </form>
         </section>
 
