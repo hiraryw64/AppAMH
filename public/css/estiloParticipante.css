@@ -89,6 +89,12 @@ form {
     border-bottom: 2px solid #af27ce;
 }
 
+.txtArea{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border: 2px solid #af27ce;
+}
+
 h3 {
     font-family: 'Comfortaa';
     font-weight: bold;

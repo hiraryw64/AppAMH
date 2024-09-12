@@ -87,6 +87,18 @@ const paginaNuevoHistorico = (req, res) => {
   res.sendFile("./views/nuevoHistorico.html", optionsRuta); // le enviamos la ruta
 }; 
 
+/** ---------- BUSCADORES ----------- */
+
+/** PAGINA DE BUSCADOR PARTICIPANTE */
+const paginaBuscadorParticipante = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/buscadorParticipante.html", optionsRuta); // le enviamos la ruta
+}; 
+
+
   module.exports = {
     paginaMenu,
     paginaNuevoParticipante,
@@ -95,5 +107,6 @@ const paginaNuevoHistorico = (req, res) => {
     paginaNuevaSalud,
     paginaNuevaFormacion,
     paginaNuevaLaboral,
-    paginaNuevoHistorico
+    paginaNuevoHistorico,
+    paginaBuscadorParticipante
   };

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico - Nuevo participante</title>
     <script type="module" async src="./javaScript/index.js"></script>
-    <link href="./css/estiloMenu.css" rel="stylesheet" type="text/css" />
+    <link href="../css/estiloParticipante.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,25 +15,33 @@
 </head>
 
 <body>
-    <header class="divCuerpo">
-        <section class="formacion">
+    <header>
+        <a class="imgLogo">
+            <img class="logo" src="../imagenes/logo_movilidad_humana.png" />
+        </a>
+    </header>
+
+    <main class="main-content">
+        <section class="datos">
             <h2>FICHA DE ACOGIDA</h2>
 
             <form id="form_historico" action="" method="post">
 
-                <h3><strong>Histórico de actuaciones</strong></h3>
+                <h3>Histórico de actuaciones</h3>
+
+                <textarea class="txtArea"></textarea>
 
 
                 <div class="botones-form">
-                    <button type="button" id="comprobar">Comprobar</button>
-                    <input type="submit" value="Guardar" />
-                    <input type="reset" value="Borrar" />
-                    <a href="/pagNuevaLaboral">Anterior</a>
+                    <button class="btnes" type="button" id="comprobar">Comprobar</button>
+                    <input class="btnes" type="reset" id="borrar" value="Limpiar" />
+                    <input class="btnes" type="submit" value="Guardar" />
+                    <a class="btnes"href="/pagUnidadFamiliar">Anterior</a>
                 </div>
             </form>
         </section>
 
-    </header>
+    </main>
 
 
 </body>
