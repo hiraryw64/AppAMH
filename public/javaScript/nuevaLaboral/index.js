@@ -70,5 +70,6 @@ botonComprobar.addEventListener("click", () => {
             valorSectoresExpPrevia = sectoresExpPrevia.value;
             valorOtrosDatosExpPrevia = otrosDatosExpPrevia.value;
         }
+        botonSiguiente.style.visibility = "visible";
     }
 });
