@@ -71,5 +71,6 @@ botonComprobar.addEventListener("click", () => {
             valorOtrosDatosExpPrevia = otrosDatosExpPrevia.value;
         }
         botonSiguiente.style.visibility = "visible";
+        resultado.textContent = "Campos correctos."
     }
 });
