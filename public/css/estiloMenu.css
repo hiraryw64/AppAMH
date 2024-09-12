@@ -22,72 +22,63 @@ header {
     align-items: center;
     font-family: 'Comfortaa';
     font-size: 18px;
-    /* margin: auto; */
     width: 100%;
-    align-content: center;
-    /* border: 2px solid red; */
 }
 
-.navMenu ul>li {
-    float: left;
-    
-}
-
-.ul_subMenu{
-    display: flex;
-    flex-direction: column;
-}
-
-ul li {
+.navMenu ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
+    position: relative; /* Importante para que los submenús se posicionen correctamente */
 }
 
+.navMenu > ul {
+    display: flex;
+}
+
+.navMenu > ul > li {
+    position: relative; /* Importante para que los submenús se posicionen correctamente */
+}
 
 .navMenu ul li a {
     color: #af27ce;
     text-decoration: none;
     padding: 10px 12px;
     display: block;
-
 }
 
-.navMenu li a:hover {
+.navMenu ul li:hover > a {
     background-color: #af27ce;
     color: white;
 }
 
-.navMenu li ul {
-    display: none;
+.navMenu ul li ul {
+    display: none; /* Oculta los submenús por defecto */
     position: absolute;
+    top: 100%; /* Para que se muestren debajo del elemento padre */
+    left: 0;
     min-width: 140px;
+    background: white; /* Fondo para el submenú */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra para destacar el submenú */
 }
 
-.navMenu ul li:hover>ul {
-    display: block;
+.navMenu ul li:hover > ul {
+    display: block; /* Muestra el submenú al pasar el ratón */
 }
 
-.navMenu li ul li {
+.navMenu ul li ul li {
     position: relative;
+    width: 100%;
 }
 
-.navMenu li ul li ul {
-    right: -140px;
-    top: 0px;
+.navMenu ul li ul li ul {
+    top: 0;
+    left: 100%; /* Desplazamiento horizontal del submenú de segundo nivel */
 }
-
-
-
-/* 
-body {
-    color: #af27ce;
-    font-family: 'Comfortaa';
-    font-size: 16px;
-} */
 
 .imgLogo {
     display: flex;
     margin-left: 10px;
-    /* width: 600px; */
 }
 
 .logo {
@@ -108,15 +99,3 @@ body {
 .iconoGrande img {
     height: 45px;
 }
-
-
-/* footer {
-    font-family: 'Roboto';
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    background-color: #af27ce;
-    color: white;
-    align-items: center;
-} */
