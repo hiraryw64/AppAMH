@@ -89,13 +89,13 @@ const paginaNuevoHistorico = (req, res) => {
 
 /** ---------- BUSCADORES ----------- */
 
-/** PAGINA DE BUSCADOR PARTICIPANTE */
-const paginaBuscadorParticipante = (req, res) => {
+/** PAGINA DE BUSCAR PARTICIPANTE */
+const paginaBuscarParticipante = (req, res) => {
   //Enviamos la dirección de un html
   const optionsRuta = {
     root: path.join(__dirname, "../public"),
   };
-  res.sendFile("./views/buscadorParticipante.html", optionsRuta); // le enviamos la ruta
+  res.sendFile("./views/buscarParticipante.html", optionsRuta); // le enviamos la ruta
 }; 
 
 
@@ -108,5 +108,5 @@ const paginaBuscadorParticipante = (req, res) => {
     paginaNuevaFormacion,
     paginaNuevaLaboral,
     paginaNuevoHistorico,
-    paginaBuscadorParticipante
+    paginaBuscarParticipante
   };

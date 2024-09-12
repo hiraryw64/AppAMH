@@ -36,11 +36,7 @@
                     <input class="inputTexto" type="text" id="apellido1" name="apellido1"
                         placeholder=" Introduzca el primer apellido" required />
                 </div>
-                <div class="div_bloque">
-                    <label for="apellido2">Segundo apellido</label>
-                    <input class="inputTexto" type="text" id="apellido2" name="apellido2"
-                        placeholder=" Introduzca el segundo apellido" required />
-                </div>
+
                 <div class="div_bloque">
                     <label for="dni">Documento de identidad (especifica si es DNI, NIE, Pasaporte o TIE)</label>
                     <input class="inputTexto" type="text" id="dni" name="dni"
@@ -68,14 +64,14 @@
                         </tbody>
                     </table>
                 </section>
+                <div class="botones-form">
+                    <a class="btnes" id="buscar" href="/pagBuscarParticipante">Buscar</a>
+                    <input class="btnes" type="reset" id="borrar" value="Limpiar" />
+                    <a class="btnes" id="siguiente" href="/pagMenu">Volver</a>
+                </div>
         </section>
-        </div>
 
-        <div class="botones-form">
-            <button class="btnes" type="button" id="buscar">Buscar</button>
-            <input class="btnes" type="reset" id="borrar" value="Limpiar" />
-            <a class="btnes" id="siguiente" href="/pagMenu">Volver</a>
-        </div>
+        
         <p id="resultado"></p>
         </form>
         </section>
