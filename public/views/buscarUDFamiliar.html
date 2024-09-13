@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Participante</title>
+    <script type="module" async src="./javaScript/addParticipantes/index.js"></script>
+    <link href="../css/estiloParticipante.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="imgLogo">
+            <img class="logo" src="../imagenes/logo_movilidad_humana.png" />
+        </a>
+    </header>
+    <main class="main-content">
+        <section class="datos">
+            <h2>FICHA DE ACOGIDA</h2>
+
+            <form id="form_nuevoPart" action="" method="post">
+
+                <div class="div_bloque">
+                    <label for="nombre">Nombre</label>
+                    <input class="inputTexto" type="text" id="nombre" name="nombre" placeholder=" Introduzca el nombre"
+                        required />
+                </div>
+                <div class="div_bloque">
+                    <label for="apellido1">Primer apellido</label>
+                    <input class="inputTexto" type="text" id="apellido1" name="apellido1"
+                        placeholder=" Introduzca el primer apellido" required />
+                </div>
+
+                <div class="div_bloque">
+                    <label for="dni">Documento de identidad (especifica si es DNI, NIE, Pasaporte o TIE)</label>
+                    <input class="inputTexto" type="text" id="dni" name="dni"
+                        placeholder=" Introduzca el documento de identidad" required />
+                </div>
+
+                <section id="infoTabla">
+                    <table id="datos_Tabla">
+                        <caption>
+                            <h2>Datos personales</h2>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <!-- <th id="t_contador">#</th> -->
+                                <th id="t_nombre">Nombre</th>
+                                <th id="t_apellido1">Primer apellido</th>
+                                <th id="t_dni">Documento de identidad</th>
+                                <th id="t_puestoFamiliar">Puesto familiar</th>
+                                <th id="t_nivelEstudios">Nivel de estudios</th>
+                                <th id="t_premisoTrabajo">Permiso de trabajo</th>
+                                <th id="t_situacionLaboral">Situación laboral</th>                              
+                            </tr>
+                        </thead>
+                        <tbody id="body_Tabla">
+                        </tbody>
+                    </table>
+                </section>
+                <div class="botones-form">
+                    <a class="btnes" id="buscar" href="/pagBuscarUnidadFamiliar">Buscar</a>
+                    <input class="btnes" type="reset" id="borrar" value="Limpiar" />
+                    <a class="btnes" id="volver" href="/pagMenu">Volver</a>
+                </div>
+        </section>
+
+        
+        <p id="resultado"></p>
+        </form>
+        </section>
+
+    </main>
+
+    <!-- <footer>
+        © 2024 Olga Gil y Lucía Morado. Todos los derechos reservados
+    </footer> -->
+
+</body>
+
+</html>

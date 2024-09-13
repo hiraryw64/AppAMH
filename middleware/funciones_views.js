@@ -98,6 +98,15 @@ const paginaBuscarParticipante = (req, res) => {
   res.sendFile("./views/buscarParticipante.html", optionsRuta); // le enviamos la ruta
 }; 
 
+/** PAGINA DE BUSCAR UNIDAD FAMILIAR */
+const paginaBuscarUDFamiliar = (req, res) => {
+  //Enviamos la dirección de un html
+  const optionsRuta = {
+    root: path.join(__dirname, "../public"),
+  };
+  res.sendFile("./views/buscarUDFamiliar.html", optionsRuta); // le enviamos la ruta
+}; 
+
 
   module.exports = {
     paginaMenu,
@@ -108,5 +117,6 @@ const paginaBuscarParticipante = (req, res) => {
     paginaNuevaFormacion,
     paginaNuevaLaboral,
     paginaNuevoHistorico,
-    paginaBuscarParticipante
+    paginaBuscarParticipante,
+    paginaBuscarUDFamiliar
   };

@@ -8,7 +8,8 @@ const {
   paginaNuevaFormacion,
   paginaNuevaLaboral,
   paginaNuevoHistorico,
-  paginaBuscarParticipante } = require("./middleware/funciones_views.js");
+  paginaBuscarParticipante,
+paginaBuscarUDFamiliar } = require("./middleware/funciones_views.js");
 
 
 /** --- CREAMOS LAS CONSTANTES QUE NOS DESCARGARAN, INDICAN LA RUTA Y EJECUTAN "express" --- */
@@ -58,7 +59,8 @@ app.get("/pagNuevoHistorico", paginaNuevoHistorico);
 /** --- BUSCADORES --- */
 //Página Buscador Participante
 app.get("/pagBuscarParticipante", paginaBuscarParticipante);
-
+//Página Buscador Participante
+app.get("/pagBuscarUDFamiliar", paginaBuscarUDFamiliar);
 
 
 /* --- START SERVER --- */
