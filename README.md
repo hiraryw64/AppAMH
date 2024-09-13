@@ -7,4 +7,4 @@ El programa está pensado como una serie de **formularios** que se conectarían 
 
 La parte visual, así como toda la parte relacionada con el servidor, ha sido desarrollada por Lucía Morado, mientras que la funcionalidad de los formularios y la parte relacionada con la base de datos ha sido gestionada por mí.
 
-En caso de que alguien quiera retomar el trabajo por donde lo dejamos, puede tomarse la libertad de hacer un fork del proyecto.
+En caso de que alguien quiera retomar el trabajo por donde lo dejamos **para uso de dicha asociación**, puede tomarse la libertad de hacer un fork del proyecto.
